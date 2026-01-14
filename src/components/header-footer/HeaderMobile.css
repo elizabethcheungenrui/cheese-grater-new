@@ -1,0 +1,77 @@
+.header-mobile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  padding: 1rem 2rem 0.5rem 0;
+  background: var(--cg-white);
+  border-bottom: 2px solid #ddd;
+}
+
+.header-mobile .logo {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
+.header-mobile .logo h3 {
+  margin: 0rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.header-mobile .logo .the {
+  font-family: 'Grifa';
+  font-weight: 400;
+  font-size: 0.5rem;
+}
+
+.header-mobile .logo-link {
+  justify-self: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* "CHEESE GRATER" */
+.header-mobile .cheese-grater {
+  font-family: 'Bitter';
+  font-weight: 900;
+  font-size: 1.5rem;
+
+  display: inline-block;
+  transform: scaleX(0.7);
+  transform-origin: center;
+
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
+}
+
+.header-mobile .cheese-grater .cheese {
+  color: var(--cg-yellow-t);
+}
+
+.header-mobile .cheese-grater .grater {
+  color: black;
+}
+
+.header-mobile .grater-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  background-image: url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_full_opacity.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  vertical-align: -0.15em; /* adjust up/down */
+  transform: scaleX(1.4);
+}
+
+.menu-toggle {
+  justify-self: end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}

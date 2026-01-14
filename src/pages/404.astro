@@ -1,0 +1,41 @@
+---
+// src/pages/404.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 – Not Found">
+  <main class="not-found">
+    <h1>404 Not Found</h1>
+    <p>
+      Either we’ve cocked up and routed this link to something that doesn’t
+      exist, or you just aren’t that good at typing in links yourself. Maybe try
+      searching up what you want instead?
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding: 2rem 10rem;
+  }
+
+  .not-found h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--cg-font);
+  }
+
+  .not-found p {
+    font-family: 'Libre Baskerville';
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--cg-font);
+  }
+
+  @ni
+  @media (max-width: 1024px) {
+    .not-found {
+      padding: 1.5rem;
+    }
+  }
+</style>

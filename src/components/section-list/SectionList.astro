@@ -1,0 +1,15 @@
+---
+// src/components/SectionList.astro
+import Title from './Title.astro';
+import List from './List.astro';
+
+const { section } = Astro.props;
+
+// simple server-side mobile detection if you want
+// const isMobile = false; // or via CSS instead
+---
+
+<main class="page-desktop">
+  <Title sectionUpper={section} />
+  <List section={section} />
+</main>
