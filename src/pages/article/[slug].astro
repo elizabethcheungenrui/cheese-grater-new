@@ -1,26 +1,10 @@
 ---
 // src/pages/article/[slug].astro
-export const prerender = false;
+export const prerender = true;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleContent from '../../components/article/ArticleContent.astro';
 import { getSupabaseClient } from '../../lib/supabaseClient';
-
-export async function getStaticPaths() {
-  const supabase = getSupabaseClient();
-
-  const { data: articles, error } = await supabase
-    .from('articles')
-    .select('slug');
-
-  if (error || !articles) {
-    return [];
-  }
-
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-  }));
-}
 
 const supabase = getSupabaseClient();
 // get slug from URL

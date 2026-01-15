@@ -9,6 +9,11 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'server',
   integrations: [react(), mdx()],
-  adapter: vercel()
+  adapter: vercel({
+    isr: {
+      bypassToken: import.meta.env.VERCEL_REVALIDATE_TOKEN,
+    }
+  })
 });
