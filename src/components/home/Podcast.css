@@ -53,7 +53,7 @@
 }
 
 .podcast-hero a {
-  color: var(--cg-font);
+  color: var(--cg-white);
 }
 
 .podcast-hero .text {
@@ -78,6 +78,10 @@
 .button-h3 {
   color: var(--cg-white);
   font-size: 1.2rem;
+}
+
+.podcast-hero h2 {
+  text-align: center;
 }
 
 .podcast-hero p {
