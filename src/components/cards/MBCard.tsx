@@ -1,4 +1,3 @@
-import { Image } from "astro:assets";
 import './Card.css';
 
 export default function MBCard({
@@ -20,12 +19,7 @@ export default function MBCard({
     <div className="card mb-card">
       <a href={`/article/${slug}`} className="link">
         <div className="ratio-7-5">
-          <Image 
-            src={image || undefined} 
-            alt={title}
-            layout='constrained'
-            inferSize
-          />
+          <img src={image} alt={title} />
         </div>
 
         {tag != '' && (

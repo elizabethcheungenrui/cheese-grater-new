@@ -4,7 +4,6 @@ import { formatDate } from '../../methods/formatting';
 import CCard from '../cards/CCard';
 import MBCard from '../cards/MBCard';
 import { getSectionArticles } from '../../lib/getSectionArticles';
-import { Image } from 'astro:assets';
 
 const { article, isEditor } = Astro.props;
 
@@ -35,13 +34,12 @@ const dataBottom = filtered.slice(4, 8);
         {article.summary && <h2>{article.summary}</h2>}
 
         <address class="author-box">
-          <Image
+          <img
             class="author-image"
             src={article.author_thumbnail ??
               'https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/author_thumbnails/cg_author.jpeg'}
             alt={article.author}
-            layout='constrained'
-            inferSize
+            loading="lazy"
           />
 
           <div class="author-text">
@@ -52,12 +50,7 @@ const dataBottom = filtered.slice(4, 8);
 
         {
           article.image_url && (
-            <Image 
-              src={article.image_url} 
-              alt={article.image_caption || ''}
-              layout='constrained' 
-              inferSize
-            />
+            <img src={article.image_url} alt={article.image_caption || ''} />
           )
         }
 
