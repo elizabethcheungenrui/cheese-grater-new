@@ -1,3 +1,4 @@
+import { Image } from "astro:assets";
 import './Card.css';
 
 export default function ACard({
@@ -21,11 +22,12 @@ export default function ACard({
     <div className="card a-card">
       <a href={`/article/${slug}`} className="link">
         <div className="ratio-7-5">
-          <img
+          <Image
             src={image || undefined}
             alt={title}
-            fetchPriority="high"
-            loading="lazy"
+            layout='constrained'
+            inferSize
+            priority
           />
         </div>
 

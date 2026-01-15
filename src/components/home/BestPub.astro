@@ -1,13 +1,16 @@
 ---
+import { Image } from "astro:assets";
 import './BestPub.css';
 ---
 
 <section class="best-pub" aria-labelledby="bestpub-heading">
   <figure class="cover">
     <a href="/past-issues/issue-93">
-      <img
+      <Image
         src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_issue93.png"
         alt="Issue 94 cover of The Cheese Grater"
+        layout='constrained'
+        inferSize
       />
     </a>
   </figure>

@@ -14,6 +14,7 @@ export default defineConfig({
   adapter: vercel({
     isr: {
       bypassToken: import.meta.env.VERCEL_REVALIDATE_TOKEN,
-    }
+    },
+    imageService: true,
   })
 });

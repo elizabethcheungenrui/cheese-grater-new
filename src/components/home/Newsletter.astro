@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import './Newsletter.css';
 ---
 
@@ -8,9 +9,12 @@ import './Newsletter.css';
   aria-labelledby="newsletter-heading"
 >
   <figure class="logo">
-    <img
+    <Image
       src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_digestive.png"
       alt="The Digestive newsletter logo"
+      layout="constrained"
+      width={1280}
+      height={720}
     />
   </figure>
 

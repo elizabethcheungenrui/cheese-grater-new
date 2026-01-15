@@ -1,3 +1,4 @@
+import { Image } from "astro:assets";
 import './Card.css';
 
 export default function BCard({
@@ -21,7 +22,12 @@ export default function BCard({
     <div className="card b-card">
       <a href={`/article/${slug}`} className="link">
         <div className="ratio-7-5">
-          <img src={image || undefined} alt={title} loading="lazy" />
+          <Image 
+            src={image || undefined}
+            alt={title}
+            layout='constrained'
+            inferSize
+          />
         </div>
 
         {tag != '' && (
