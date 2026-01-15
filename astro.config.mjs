@@ -16,5 +16,8 @@ export default defineConfig({
       bypassToken: import.meta.env.VERCEL_REVALIDATE_TOKEN,
     },
     imageService: true,
-  })
+  }),
+  image: {
+    domains: ["https://lrhddyosfvnhpxojsjpa.supabase.co"]
+  }
 });
