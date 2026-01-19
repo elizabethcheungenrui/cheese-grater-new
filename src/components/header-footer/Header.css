@@ -16,7 +16,7 @@
 }
 
 .logo .the {
-  font-family: 'Grifa';
+  font-family: "Grifa";
   font-weight: 400;
   font-size: 2rem;
 }
@@ -29,7 +29,7 @@
 
 /* "CHEESE GRATER" */
 .cheese-grater {
-  font-family: 'Bitter';
+  font-family: "Bitter";
   font-weight: 900;
   font-size: 6rem;
 
@@ -55,7 +55,7 @@
   width: 1em;
   height: 1em;
 
-  background-image: url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_full_opacity.png');
+  background-image: url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_full_opacity.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -65,7 +65,7 @@
 }
 
 .best {
-  font-family: 'Bitter';
+  font-family: "Bitter";
   font-size: 1.2rem;
   font-weight: 600;
 

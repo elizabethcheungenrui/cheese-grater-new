@@ -1,4 +1,4 @@
-import './Card.css';
+import "./Card.css";
 
 export default function CCard({
   slug,
@@ -25,8 +25,8 @@ export default function CCard({
         </div>
 
         <h2 className={`tag tag-minor tag-${section.toLowerCase()}`}>
-          {' '}
-          {tag.toUpperCase()}{' '}
+          {" "}
+          {tag.toUpperCase()}{" "}
         </h2>
 
         <h3 className={`h3-${category}`}>

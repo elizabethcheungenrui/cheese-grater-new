@@ -1,8 +1,8 @@
-import './MinorLayout.css';
+import "./MinorLayout.css";
 
-import CCard from '../components/cards/CCard';
-import type { HomepageSection } from '../lib/getSectionArticles';
-import { formatDate } from '../methods/formatting';
+import CCard from "../components/cards/CCard";
+import type { HomepageSection } from "../lib/getSectionArticles";
+import { formatDate } from "../methods/formatting";
 
 export default function MinorLayout({ data }: { data: HomepageSection }) {
   if (!data || !data.articles || data.articles.length < 3) {

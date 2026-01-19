@@ -89,7 +89,7 @@
 }
 .article-container .main-content,
 .main-heading p {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1rem;
   color: var(--cg-font);
   line-height: 1.85rem;
@@ -139,7 +139,7 @@
 }
 
 .container-side p {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1rem;
   color: var(--cg-font);
   line-height: 1.85;
@@ -152,7 +152,7 @@
 }
 
 .article-container .main-content h3 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1.2rem;
   color: var(--cg-font);
   line-height: 1.85;
@@ -165,7 +165,7 @@
 }
 
 .article-container .main-content h4 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1.2rem;
   color: var(--cg-font);
   line-height: 1.85;
@@ -202,7 +202,7 @@
 }
 
 .article-container figcaption {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   color: var(--cg-font);
   font-size: 0.8rem;
 }
@@ -224,7 +224,7 @@
 .article-body {
   display: grid;
   gap: 1rem;
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   color: var(--cg-font);
 }
 

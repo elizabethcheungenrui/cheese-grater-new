@@ -8,7 +8,7 @@
 
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-podcast-t) 100%),
-    url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png');
+    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
 
   background-repeat: no-repeat, repeat;
 
@@ -65,7 +65,7 @@
 }
 
 .podcast-hero .header {
-  font-family: 'Bitter';
+  font-family: "Bitter";
   font-weight: 800;
   font-size: 2.5rem;
   color: var(--cg-white);
@@ -85,7 +85,7 @@
 }
 
 .podcast-hero p {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   font-size: 0.9rem;
   color: var(--cg-white);
 }

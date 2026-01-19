@@ -55,7 +55,7 @@ body.more-open {
 }
 
 .more-menu-text::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 20%;
   right: 20%;

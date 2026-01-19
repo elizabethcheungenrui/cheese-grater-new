@@ -1,9 +1,9 @@
-import './MajorLayout.css';
+import "./MajorLayout.css";
 
-import ACard from '../components/cards/ACard';
-import BCard from '../components/cards/BCard';
-import type { HomepageSection } from '../lib/getSectionArticles';
-import { formatDate, truncateWords } from '../methods/formatting';
+import ACard from "../components/cards/ACard";
+import BCard from "../components/cards/BCard";
+import type { HomepageSection } from "../lib/getSectionArticles";
+import { formatDate, truncateWords } from "../methods/formatting";
 
 export default function MajorLayout({ data }: { data: HomepageSection }) {
   if (!data || !data.articles || data.articles.length < 3) {
@@ -20,7 +20,7 @@ export default function MajorLayout({ data }: { data: HomepageSection }) {
         slug={data.articles[0].slug}
         section={data.section}
         title={data.articles[0].title}
-        summary={truncateWords(data.articles[0].summary!, 160) || ''}
+        summary={truncateWords(data.articles[0].summary!, 160) || ""}
         image={data.articles[0].image_url ?? data.articles[0].author_thumbnail}
         tag={data.articles[0].subsection}
         date={formatDate(data.articles[0].date_published)}
@@ -31,7 +31,7 @@ export default function MajorLayout({ data }: { data: HomepageSection }) {
           slug={data.articles[1].slug}
           section={data.section}
           title={data.articles[1].title}
-          summary={truncateWords(data.articles[1].summary!, 110) || ''}
+          summary={truncateWords(data.articles[1].summary!, 110) || ""}
           image={
             data.articles[1].image_url ?? data.articles[1].author_thumbnail
           }
@@ -43,7 +43,7 @@ export default function MajorLayout({ data }: { data: HomepageSection }) {
           slug={data.articles[2].slug}
           section={data.section}
           title={data.articles[2].title}
-          summary={truncateWords(data.articles[2].summary!, 110) || ''}
+          summary={truncateWords(data.articles[2].summary!, 110) || ""}
           image={
             data.articles[2].image_url ?? data.articles[2].author_thumbnail
           }

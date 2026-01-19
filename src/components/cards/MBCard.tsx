@@ -1,4 +1,4 @@
-import './Card.css';
+import "./Card.css";
 
 export default function MBCard({
   slug,
@@ -22,10 +22,10 @@ export default function MBCard({
           <img src={image} alt={title} />
         </div>
 
-        {tag != '' && (
+        {tag != "" && (
           <h2 className={`tag tag-major-mbcard tag-${section.toLowerCase()}`}>
-            {' '}
-            {tag.toUpperCase()}{' '}
+            {" "}
+            {tag.toUpperCase()}{" "}
           </h2>
         )}
 

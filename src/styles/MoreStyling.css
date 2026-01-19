@@ -11,7 +11,7 @@
 }
 
 .more-styling p {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   color: var(--cg-font);
   font-size: 0.9rem;
   line-height: 2rem;
@@ -23,14 +23,14 @@ h3 {
 }
 
 .more-styling a {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   font-size: 0.9rem;
   color: var(--cg-yellow);
   text-decoration: none;
 }
 
 .more-styling li {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   font-size: 0.9rem;
   line-height: 2rem;
   color: var(--cg-font);
@@ -51,7 +51,7 @@ h3 {
 }
 
 .whoweare h1 {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   color: var(--cg-font);
   text-align: center;
 }
@@ -79,7 +79,7 @@ h3 {
 
 .author {
   color: var(--cg-font);
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.1rem;
@@ -87,7 +87,7 @@ h3 {
 
 .role {
   color: var(--cg-font);
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   font-size: 0.8rem;
   line-height: 1.1rem;
 }
@@ -108,7 +108,7 @@ h3 {
 
 .awards table {
   border-collapse: collapse;
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   font-size: 0.9rem;
   color: var(--cg-font);
   width: 100%;

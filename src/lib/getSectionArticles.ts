@@ -1,4 +1,4 @@
-import { getSupabaseClient } from '../lib/supabaseClient';
+import { getSupabaseClient } from "../lib/supabaseClient";
 const supabase = getSupabaseClient();
 
 export interface HomepageArticle {
@@ -22,12 +22,12 @@ export async function getSectionArticles(
   limit?: number,
 ): Promise<HomepageSection> {
   let query = supabase
-    .from('articles')
-    .select('*')
-    .eq('section', section)
-    .order('date_published', { ascending: false });
+    .from("articles")
+    .select("*")
+    .eq("section", section)
+    .order("date_published", { ascending: false });
 
-  if (typeof limit === 'number') {
+  if (typeof limit === "number") {
     query = query.limit(limit);
   }
 

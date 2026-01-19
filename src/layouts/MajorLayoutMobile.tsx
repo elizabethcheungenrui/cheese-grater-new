@@ -1,9 +1,9 @@
-import './MajorLayoutMobile.css';
+import "./MajorLayoutMobile.css";
 
-import ACard from '../components/cards/ACard';
-import MBCard from '../components/cards/MBCard';
-import type { HomepageSection } from '../lib/getSectionArticles';
-import { formatDate, truncateWords } from '../methods/formatting';
+import ACard from "../components/cards/ACard";
+import MBCard from "../components/cards/MBCard";
+import type { HomepageSection } from "../lib/getSectionArticles";
+import { formatDate, truncateWords } from "../methods/formatting";
 
 export default function MajorLayoutMobile({ data }: { data: HomepageSection }) {
   if (!data || !data.articles || data.articles.length < 3) {
@@ -20,7 +20,7 @@ export default function MajorLayoutMobile({ data }: { data: HomepageSection }) {
         slug={data.articles[0].slug}
         section={data.section}
         title={data.articles[0].title}
-        summary={truncateWords(data.articles[0].summary!, 160) || ''}
+        summary={truncateWords(data.articles[0].summary!, 160) || ""}
         image={data.articles[0].image_url ?? data.articles[0].author_thumbnail}
         tag={data.articles[0].subsection}
         date={formatDate(data.articles[0].date_published)}

@@ -1,4 +1,4 @@
-import './Card.css';
+import "./Card.css";
 
 export default function ACard({
   slug,
@@ -30,8 +30,8 @@ export default function ACard({
         </div>
 
         <span className={`tag tag-major tag-${section.toLowerCase()}`}>
-          {' '}
-          {tag.toUpperCase()}{' '}
+          {" "}
+          {tag.toUpperCase()}{" "}
         </span>
 
         <h3>
