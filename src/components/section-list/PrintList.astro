@@ -1,0 +1,49 @@
+---
+import { getPrintEditions } from '../../lib/getPrintEditions';
+import { Image } from 'astro:assets'
+
+const data = await getPrintEditions();
+---
+
+<ul class="subpage-list">
+  {
+    data.map((issue) => (
+    <a href={issue.href}>
+      <li class='print-item'>
+        <Image
+          src={issue.url}
+          alt={`Print edition ${issue.name}`}
+          width={800}
+          height={1120}
+          layout='constrained'
+        />
+      </li>
+    </a>
+    ))
+  } 
+</ul>
+
+<style>
+  .subpage-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 2rem 10rem;
+    gap: 4rem;
+  }
+
+  .subpage-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 0 5px black;
+  }
+
+  @media (max-width: 1024px) {
+    .subpage-list {
+      grid-template-columns: 1fr 1fr;
+      padding: 1.5rem;
+    }
+  }
+</style>

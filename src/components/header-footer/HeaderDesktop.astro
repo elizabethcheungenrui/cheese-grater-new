@@ -1,22 +1,27 @@
 ---
 import './Header.css';
 import './MoreMenu.css';
+import HeaderSearch from './HeaderSearch'
 ---
 
 <header class="header header-desktop">
   <div class="logo">
-    <h3 class="the">THE</h3>
+    <!--<h3 class="the">THE</h3>-->
     <a href="/" class="logo-link">
-      <h3 class="cheese-grater">
+      <img 
+        src='https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_web_logo_cropped.png'
+        width='650px'
+      />
+      <!--<h3 class="cheese-grater">
         <span class="cheese">CHEESE </span>
         <span class="grater">
           GR<span class="grater-icon"></span>TER
         </span>
-      </h3>
+      </h3>-->
     </a>
+    <span class="best">SPA Best Publication in London 2025</span>
   </div>
 
-  <span class="best">SPA Best Publication in London 2025</span>
 
   <nav class="menu-bar" aria-label="Primary Navigation">
     <a href="/" class="menu-item">Home</a>
@@ -40,7 +45,7 @@ import './MoreMenu.css';
     >
       More
     </button>
-
+      
     <a href="/past-issues" class="menu-item print-edition"> Print Edition </a>
 
     <a
@@ -50,6 +55,10 @@ import './MoreMenu.css';
     >
       The Digestive
     </a>
+
+    <HeaderSearch
+      client:only="react" 
+    />
   </nav>
 </header>
 
