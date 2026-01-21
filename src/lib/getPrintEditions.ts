@@ -3,8 +3,10 @@ import { getSupabaseClient } from "../lib/supabaseClient";
 const supabase = getSupabaseClient();
 
 export type PastIssue = {
+  slug: string;
   name: string;
-  url: string;
+  coverUrl: string;
+  pdfPath: string;
   href: string;
 };
 
@@ -16,25 +18,23 @@ export async function getPrintEditions(): Promise<PastIssue[]> {
       sortBy: { column: "name", order: "desc" },
     });
 
-  if (error) {
-    throw error;
-  }
+  if (error) throw error;
 
-  return (
-    files
-      ?.filter((file) => file.name.endsWith(".png"))
-      .map((file) => {
-        const slug = file.name.replace(".png", "");
+  const covers = files?.filter((f) => f.name.endsWith('.png')) ?? [];
 
-        const { data } = supabase.storage
-          .from("past-issues")
-          .getPublicUrl(file.name);
+  return covers.map((file) => {
+    const slug = file.name.replace(".png", "");
 
-        return {
-          name: slug,
-          url: data.publicUrl,
-          href: `/print/${slug}`
-        };
-      }) ?? []
-  );
+    const { data } = supabase.storage
+      .from("past-issues")
+      .getPublicUrl(file.name);
+
+    return {
+      slug,
+      name: slug,
+      coverUrl: data.publicUrl,
+      pdfPath: `${slug}.pdf`,
+      href: `/past-issues/${slug}`
+    };
+  });
 }

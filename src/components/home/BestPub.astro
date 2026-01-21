@@ -1,13 +1,26 @@
 ---
+import { getPrintEditions } from '../../lib/getPrintEditions';
+import { Image } from 'astro:assets';
 import './BestPub.css';
+
+const data = await getPrintEditions();
+
+const latestIssue = data[0];
+if (!latestIssue) return null;
+
+const match = latestIssue.slug.match(/^CG(\d+)-/);
+const issueNo = match ? match[1] : null;
 ---
 
 <section class="best-pub" aria-labelledby="bestpub-heading">
   <figure class="cover">
-    <a href="/past-issues/issue-93">
-      <img
-        src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_issue93.png"
-        alt="Issue 94 cover of The Cheese Grater"
+    <a href={latestIssue.href}>
+      <Image
+        src={latestIssue.coverUrl}
+        alt={`Print edition ${latestIssue.name}`}
+        width={800}
+        height={1120}
+        layout='constrained'
       />
     </a>
   </figure>
@@ -27,9 +40,7 @@ import './BestPub.css';
     </p>
 
     <p>
-      Issue 94 of <em>The Cheese Grater</em> is out now! Click the cover to start
-      reading. You can usually find a free print copy in either our campus newsstands
-      or one of the campus bins.
+    Issue {issueNo} of <em>The Cheese Grater</em> is out now! Click the cover to start reading. You can usually find a free print copy in either our campus newsstands or one of the campus bins.
     </p>
   </article>
 </section>

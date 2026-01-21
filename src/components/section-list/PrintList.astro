@@ -1,6 +1,6 @@
 ---
 import { getPrintEditions } from '../../lib/getPrintEditions';
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 
 const data = await getPrintEditions();
 ---
@@ -8,17 +8,17 @@ const data = await getPrintEditions();
 <ul class="subpage-list">
   {
     data.map((issue) => (
-    <a href={issue.href}>
       <li class='print-item'>
-        <Image
-          src={issue.url}
-          alt={`Print edition ${issue.name}`}
-          width={800}
-          height={1120}
-          layout='constrained'
-        />
+        <a href={issue.href}>
+          <Image
+            src={issue.coverUrl}
+            alt={`Print edition ${issue.name}`}
+            width={800}
+            height={1120}
+            layout='constrained'
+          />
+        </a>
       </li>
-    </a>
     ))
   } 
 </ul>
