@@ -8,11 +8,7 @@
   flex-direction: row;
 
   background-image:
-    linear-gradient(
-      to right,
-      rgba(226, 186, 0, 0.7) 0%,
-      rgba(28, 52, 104, 0.55) 100%
-    ),
+    linear-gradient(to right, var(--cg-yellow-t) 0%, #913bf3aa 100%),
     url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
 
   background-repeat: no-repeat, repeat;

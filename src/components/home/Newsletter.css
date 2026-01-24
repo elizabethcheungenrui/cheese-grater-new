@@ -7,11 +7,7 @@
   align-items: center;
 
   background-image:
-    linear-gradient(
-      to right,
-      rgba(200, 200, 200, 0.7) 0%,
-      rgba(28, 52, 104, 0.55) 100%
-    ),
+    linear-gradient(to right, var(--cg-yellow-t) 0%, #ff36e8aa 100%),
     url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
 
   background-repeat: no-repeat, repeat;
