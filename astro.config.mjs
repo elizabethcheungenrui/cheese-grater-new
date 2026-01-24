@@ -7,10 +7,13 @@ import mdx from "@astrojs/mdx";
 
 import vercel from "@astrojs/vercel";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://new.cheesegratermagazine.org",
   output: "server",
-  integrations: [react(), mdx()],
+  integrations: [react(), mdx(), sitemap()],
   adapter: vercel({
     isr: {
       bypassToken: import.meta.env.VERCEL_REVALIDATE_TOKEN,
