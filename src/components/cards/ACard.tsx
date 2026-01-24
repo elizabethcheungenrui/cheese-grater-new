@@ -8,6 +8,7 @@ export default function ACard({
   image,
   tag,
   date,
+  articlecontent,
 }: {
   slug: string;
   section: string;
@@ -16,6 +17,7 @@ export default function ACard({
   image: string;
   tag: string;
   date: string;
+  articlecontent: Boolean;
 }) {
   return (
     <div className="card a-card">
@@ -35,7 +37,7 @@ export default function ACard({
         </span>
 
         <h3>
-          <span className="wipe">{title}</span>
+          <span className={`wipe ${articlecontent? "mbwipe" : ""}`}>{title}</span>
         </h3>
 
         <p> {summary} </p>

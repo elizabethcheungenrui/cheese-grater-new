@@ -7,6 +7,7 @@ export default function MBCard({
   image,
   tag,
   date,
+  articlecontent,
 }: {
   slug: string;
   section: string;
@@ -14,6 +15,7 @@ export default function MBCard({
   image: string;
   tag: string;
   date: string;
+  articlecontent: Boolean;
 }) {
   return (
     <div className="card mb-card">
@@ -30,7 +32,7 @@ export default function MBCard({
         )}
 
         <h3 className="mbcard-title">
-          <span className="wipe">{title}</span>
+          <span className={`wipe ${articlecontent? "mbwipe" : ""}`}>{title}</span>
         </h3>
 
         <span className="date"> {date} </span>

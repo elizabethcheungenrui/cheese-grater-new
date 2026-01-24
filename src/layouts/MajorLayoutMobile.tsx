@@ -24,6 +24,7 @@ export default function MajorLayoutMobile({ data }: { data: HomepageSection }) {
         image={data.articles[0].image_url ?? data.articles[0].author_thumbnail}
         tag={data.articles[0].subsection}
         date={formatDate(data.articles[0].date_published)}
+        articlecontent={false}
       />
 
       <MBCard
@@ -33,6 +34,7 @@ export default function MajorLayoutMobile({ data }: { data: HomepageSection }) {
         image={data.articles[1].image_url ?? data.articles[1].author_thumbnail}
         tag={data.articles[1].subsection}
         date={formatDate(data.articles[1].date_published)}
+        articlecontent={false}
       />
 
       <MBCard
@@ -42,6 +44,7 @@ export default function MajorLayoutMobile({ data }: { data: HomepageSection }) {
         image={data.articles[2].image_url ?? data.articles[1].author_thumbnail}
         tag={data.articles[2].subsection}
         date={formatDate(data.articles[2].date_published)}
+        articlecontent={false}
       />
 
       <div className="button-row">

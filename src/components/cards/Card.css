@@ -47,6 +47,13 @@
   background-size: auto 200%;
 }
 
+.wipe.mbwipe {
+  background-image: linear-gradient(
+    white 50%,
+    var(--cg-yellow-t) 50%
+  );
+}
+
 .link:hover .wipe {
   background-position-y: 100%;
 }

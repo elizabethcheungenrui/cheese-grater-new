@@ -24,6 +24,7 @@ export default function MajorLayout({ data }: { data: HomepageSection }) {
         image={data.articles[0].image_url ?? data.articles[0].author_thumbnail}
         tag={data.articles[0].subsection}
         date={formatDate(data.articles[0].date_published)}
+        articlecontent={false}
       />
 
       <section className="major-layout-bottom-grid">
