@@ -2,6 +2,7 @@
 // src/components/header/HeaderMobile.astro
 import './HeaderMobile.css';
 import './MoreMenuMobile.css';
+import HeaderSearch from './HeaderSearch'
 ---
 
 <header class="header-mobile">
@@ -78,5 +79,9 @@ import './MoreMenuMobile.css';
         <a href="/welfare">Help & Welfare</a>
       </div>
     </details>
+
+    <HeaderSearch
+      client:only="react"
+    />
   </div>
 </nav>
