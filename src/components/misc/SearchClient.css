@@ -1,0 +1,29 @@
+.search-page {
+  display: grid;
+  padding: 2rem 10rem;
+  gap: 2rem;
+}
+
+.search-page h1 {
+  color: var(--cg-font);
+}
+
+.search-page p {
+  color: var(--cg-font);
+  font-family: "Libre Baskerville";
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+  }
+}

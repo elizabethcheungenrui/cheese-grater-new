@@ -1,25 +1,7 @@
 ---
-export const prerender = false;
-
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Search from "../components/misc/Search.astro";
-import { getSupabaseClient } from "../lib/supabaseClient";
-
-const supabase = getSupabaseClient();
-
-const query = Astro.url.searchParams.get("q")?.trim() ?? "";
-
-let results = [];
-
-if (query) {
-  const { data, error } = await supabase
-    .rpc("search_articles", { query });
-
-  if (!error && data) {
-    results = data;
-  }
-}
+import SearchClient from "../components/misc/SearchClient";
 ---
-<BaseLayout title={`Search${query ? `: ${query}` : ""}`}>
-  <Search query={query} results={results} />
+<BaseLayout title="Search"}>
+  <SearchClient client:load />
 </BaseLayout>
