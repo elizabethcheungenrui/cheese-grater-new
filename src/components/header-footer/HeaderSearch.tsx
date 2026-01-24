@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./HeaderSearch.css";
 
-export default function HeaderSearch() {
+export default function HeaderSearch({ isMobile }: {isMobile: boolean }) {
   const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -28,7 +28,7 @@ export default function HeaderSearch() {
         🔍
       </button>
 
-      {open && (
+      {(open || isMobile) && (
         <div className="search-panel">
           <label className="sr-only" htmlFor="header-search-input">
             Search articles

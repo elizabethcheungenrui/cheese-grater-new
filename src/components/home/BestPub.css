@@ -44,7 +44,7 @@
   height: auto;
 }
 
-.text {
+.bestpub-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -52,7 +52,7 @@
   gap: 1.5rem;
 }
 
-.text h2 {
+.bestpub-text h2 {
   font-family: "Bitter";
   font-weight: 800;
   font-size: 2.5rem;
@@ -79,15 +79,15 @@
   }
   .bestpub-header {
     text-align: center;
-    line-height: 3rem;
+    line-height: 2.6rem;
   }
-  .text {
-    gap: 1rem;
+  .bestpub-text {
+    gap: 0.5rem;
   }
-  .text h2 {
-    font-size: 2.3rem;
+  .bestpub-text h2 {
+    font-size: 1.8rem;
   }
-  .text p {
+  .bestpub-text p {
     font-size: 0.85rem;
   }
 }
