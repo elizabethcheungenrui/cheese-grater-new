@@ -37,12 +37,12 @@ export default function ACard({
         </span>
 
         <h3>
-          <span className={`wipe ${articlecontent? "mbwipe" : ""}`}>{title}</span>
+          <span className={`wipe ${articlecontent ? "mbwipe" : ""}`}>
+            {title}
+          </span>
         </h3>
 
-        <p
-          dangerouslySetInnerHTML={{__html:(summary)}} 
-        />
+        <p dangerouslySetInnerHTML={{ __html: summary }} />
 
         <span className="date"> {date} </span>
       </a>

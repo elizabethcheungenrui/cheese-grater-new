@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./HeaderSearch.css";
 
-export default function HeaderSearch({ isMobile }: {isMobile: boolean }) {
+export default function HeaderSearch({ isMobile }: { isMobile: boolean }) {
   const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -47,11 +47,7 @@ export default function HeaderSearch({ isMobile }: {isMobile: boolean }) {
             }}
           />
 
-          <button
-            type="button"
-            className="sr-only"
-            onClick={submit}
-          >
+          <button type="button" className="sr-only" onClick={submit}>
             Submit
           </button>
         </div>

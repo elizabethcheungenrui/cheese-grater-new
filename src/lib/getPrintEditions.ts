@@ -20,7 +20,7 @@ export async function getPrintEditions(): Promise<PastIssue[]> {
 
   if (error) throw error;
 
-  const covers = files?.filter((f) => f.name.endsWith('.png')) ?? [];
+  const covers = files?.filter((f) => f.name.endsWith(".png")) ?? [];
 
   return covers.map((file) => {
     const slug = file.name.replace(".png", "");
@@ -34,7 +34,7 @@ export async function getPrintEditions(): Promise<PastIssue[]> {
       name: slug,
       coverUrl: data.publicUrl,
       pdfPath: `${slug}.pdf`,
-      href: `/past-issues/${slug}`
+      href: `/past-issues/${slug}`,
     };
   });
 }

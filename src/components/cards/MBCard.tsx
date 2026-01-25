@@ -32,7 +32,9 @@ export default function MBCard({
         )}
 
         <h3 className="mbcard-title">
-          <span className={`wipe ${articlecontent? "mbwipe" : ""}`}>{title}</span>
+          <span className={`wipe ${articlecontent ? "mbwipe" : ""}`}>
+            {title}
+          </span>
         </h3>
 
         <span className="date"> {date} </span>

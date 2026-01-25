@@ -13,6 +13,6 @@ Sitemap: https://new.cheesegratermagazine.org/sitemap-index.xml
       headers: {
         "Content-Type": "text/plain",
       },
-    }
+    },
   );
 };

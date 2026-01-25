@@ -3,7 +3,7 @@ import type { MiddlewareHandler } from "astro";
 
 const supabase = createClient(
   import.meta.env.PUBLIC_SUPABASE_URL,
-  import.meta.env.PUBLIC_SUPABASE_ANON_KEY
+  import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
 );
 
 export const onRequest: MiddlewareHandler = async (context, next) => {

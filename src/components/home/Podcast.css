@@ -56,7 +56,7 @@
   color: var(--cg-white);
 }
 
-.podcast-text{
+.podcast-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

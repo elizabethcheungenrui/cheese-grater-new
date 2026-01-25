@@ -38,8 +38,7 @@ export default function SearchClient() {
 
       const supabase = getSupabaseClient();
 
-      const { data, error } = await supabase
-        .rpc("search_articles", { query });
+      const { data, error } = await supabase.rpc("search_articles", { query });
 
       if (!cancelled && !error && data) {
         setResults(data);
@@ -56,15 +55,13 @@ export default function SearchClient() {
 
   return (
     <section className="search-page">
-      <h1>
-        {query ? `Search results for “${query}”` : "Search"}
-      </h1>
+      <h1>{query ? `Search results for “${query}”` : "Search"}</h1>
 
       {loading && <p>Searching…</p>}
       {!loading && query && results.length === 0 && <p>No results found.</p>}
 
       <ul className="card-grid">
-        {results.map(article => (
+        {results.map((article) => (
           <li key={article.id}>
             <CCard
               slug={article.slug}
