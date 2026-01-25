@@ -86,7 +86,11 @@
   font-size: 1.2rem;
   line-height: 25px;
   color: var(--cg-font);
+  i {
+    font-style: italic;
+  }
 }
+
 .article-container .main-content,
 .main-heading p {
   font-family: "Libre Baskerville", serif;

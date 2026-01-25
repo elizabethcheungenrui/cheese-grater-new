@@ -34,6 +34,7 @@ h3 {
   font-size: 0.9rem;
   line-height: 2rem;
   color: var(--cg-font);
+  margin-left: 1rem;
 }
 
 .text {

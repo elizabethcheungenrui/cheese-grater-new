@@ -31,7 +31,10 @@ const dataBottom = filtered.slice(4, 8);
       </header>
 
       <section class="main-content">
-        {article.summary && <h2>{article.summary}</h2>}
+        {article.summary && (
+          <h2
+            set:html={article.summary}
+          />)}
 
         <address class="author-box">
           <img
