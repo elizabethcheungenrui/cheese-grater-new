@@ -35,7 +35,9 @@ export default function BCard({
           <span className="wipe">{title}</span>
         </h3>
 
-        <p> {summary} </p>
+        <p
+          dangerouslySetInnerHTML={{__html:(summary)}} 
+        />
 
         <span className="date"> {date} </span>
       </a>
