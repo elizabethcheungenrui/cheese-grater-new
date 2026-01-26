@@ -1,6 +1,8 @@
 import type { APIRoute } from "astro";
 import { getSupabaseClient } from "../../lib/supabaseClient";
 
+export const prerender = false;
+
 export const GET: APIRoute = async ({ params }) => {
   const slug = params.slug;
 
@@ -16,7 +18,7 @@ export const GET: APIRoute = async ({ params }) => {
 
   const { data, error } = await supabase.storage
     .from("past-issues")
-    .createSignedUrl(pdfPath, 60, {
+    .createSignedUrl(pdfPath, 600, {
       download: `${slug}.pdf`,
     });
 
