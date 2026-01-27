@@ -1,5 +1,4 @@
 import type { APIRoute } from "astro";
-import { getSupabaseClient } from "../../lib/supabaseClient";
 
 export const prerender = false;
 
@@ -10,23 +9,9 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response("Missing print edition", { status: 400 });
   }
 
-  const supabase = getSupabaseClient();
-
-  // Reconstruct the PDF path from the slug
-  // Must match how files are stored in Supabase
-  const pdfPath = `${slug}.pdf`;
-
-  const { data, error } = await supabase.storage
-    .from("past-issues")
-    .createSignedUrl(pdfPath, 600, {
-      download: `${slug}.pdf`,
-    });
-
-  if (error || !data) {
-    console.error("Failed to create signed URL:", error);
-    return new Response("Print edition not found", { status: 404 });
-  }
+  const publicUrl =
+    `https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/past-issues/${slug}.pdf?download=${slug}.pdf`;
 
   // Hard redirect to Supabase download URL
-  return Response.redirect(data.signedUrl, 302);
+  return Response.redirect(publicUrl, 302);
 };
