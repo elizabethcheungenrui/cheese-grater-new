@@ -10,7 +10,7 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   const publicUrl =
-    `https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/past-issues/${slug}.pdf?download=${slug}.pdf`;
+    `https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/past-issues/${slug}.pdf`;
 
   // Hard redirect to Supabase download URL
   return Response.redirect(publicUrl, 302);
