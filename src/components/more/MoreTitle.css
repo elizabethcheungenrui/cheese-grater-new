@@ -20,7 +20,7 @@
 
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, #e2ba0066 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   animation: cg-drift-more-title 10s linear infinite;
 }

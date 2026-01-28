@@ -36,7 +36,6 @@ body.menu-open {
 }
 
 .mobile-menu details {
-  grid-column: 1 / -1;
   display: grid;
   gap: 0.2rem;
   a {
@@ -47,4 +46,9 @@ body.menu-open {
 
 .details {
   display: grid;
+}
+
+.time-machine {
+  font-weight: 400 !important;
+  font-size: 0.7rem !important;
 }

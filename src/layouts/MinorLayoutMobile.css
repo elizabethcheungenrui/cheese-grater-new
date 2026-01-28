@@ -21,17 +21,17 @@
 .minor-layout-Voices {
   background-image:
     linear-gradient(rgba(196, 40, 115, 0.7), rgba(196, 40, 115, 0.7)),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
 
 .minor-layout-News {
   background-image:
     linear-gradient(rgba(44, 89, 174, 0.7), rgba(44, 89, 174, 0.7)),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
 
 .minor-layout-Humour {
   background-image:
     linear-gradient(rgba(0, 103, 75, 0.7), rgba(0, 103, 75, 0.7)),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 }

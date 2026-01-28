@@ -7,17 +7,14 @@ const data = await getPrintEditions();
 
 const latestIssue = data[0];
 if (!latestIssue) return null;
-
-const match = latestIssue.slug.match(/^CG(\d+)-/);
-const issueNo = match ? match[1] : null;
 ---
 
 <section class="best-pub" aria-labelledby="bestpub-heading">
   <figure class="cover">
-    <a href={latestIssue.href}>
+    <a href={`/past-issues/${latestIssue.slug}`}>
       <Image
-        src={latestIssue.coverUrl}
-        alt={`Print edition ${latestIssue.name}`}
+      src={`https://print.cheesegratermagazine.org/${latestIssue.slug}.png`}
+        alt={`Print Edition ${latestIssue.name}`}
         width={800}
         height={1120}
         layout='constrained'
@@ -40,7 +37,7 @@ const issueNo = match ? match[1] : null;
     </p>
 
     <p>
-    Issue {issueNo} of <em>The Cheese Grater</em> is out now! Click the cover to start reading. You can usually find a free print copy in either our campus newsstands or one of the campus bins.
+    {latestIssue.name} of <em>The Cheese Grater</em> is out now! Click the cover to start reading. You can usually find a free print copy in either our campus newsstands or one of the campus bins.
     </p>
   </article>
 </section>

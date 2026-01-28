@@ -9,8 +9,7 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response("Missing print edition", { status: 400 });
   }
 
-  const publicUrl =
-    `https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/past-issues/${slug}.pdf`;
+  const publicUrl = `https://print.cheesegratermagazine.org/${slug}.pdf`;
 
   // Hard redirect to Supabase download URL
   return Response.redirect(publicUrl, 302);

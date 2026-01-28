@@ -41,7 +41,7 @@
 .title.voices {
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-voices-t) 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   animation: cg-drift-section 10s linear infinite;
 }
@@ -49,7 +49,7 @@
 .title.news {
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-news-t) 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   animation: cg-drift-section 10s linear infinite;
 }
@@ -57,7 +57,7 @@
 .title.humour {
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-humour-t) 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   animation: cg-drift-section 10s linear infinite;
 }
@@ -65,7 +65,7 @@
 .title.podcast {
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-podcast-t) 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   animation: cg-drift-section 10s linear infinite;
 }
@@ -73,7 +73,7 @@
 .title.print {
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, #999999aa 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   animation: cg-drift-section 10s linear infinite;
 }

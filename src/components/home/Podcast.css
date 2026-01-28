@@ -8,7 +8,7 @@
 
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-podcast-t) 100%),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
 
   background-repeat: no-repeat, repeat;
 

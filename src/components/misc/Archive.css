@@ -88,6 +88,7 @@
 
 .archive-page .body img {
   width: 120px;
+  height: 300px;
 }
 
 .archive-page .content {
@@ -95,6 +96,11 @@
   align-content: start;
   gap: 0.5rem;
   color: #333;
+}
+
+.archive-page .print-img {
+  width: 160px;
+  height: 225px;
 }
 
 .archive-page .page-footer {

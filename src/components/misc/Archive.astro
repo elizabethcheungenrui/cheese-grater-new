@@ -1,14 +1,20 @@
 ---
 import { getSectionArticles } from '../../lib/getSectionArticles';
+import { getPrintEditions } from '../../lib/getPrintEditions';
+import { Image } from 'astro:assets';
+
 const newsData = await getSectionArticles('News', 5);
 const humourData = await getSectionArticles('Humour', 5);
+const printData = await getPrintEditions();
+const latestIssue = printData[0];
+
 import './Archive.css';
 ---
 
 <div class="archive-page">
   <header class="page-header">
     <img
-      src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/archive/cg-logo-archive.png"
+      src="https://images.cheesegratermagazine.org/archive/cg-logo-archive.png"
       alt="Cheese Grater Magazine"
       style="width: 1020px;"
     />
@@ -29,14 +35,14 @@ import './Archive.css';
       <section class="section">
         <a href="/news">
           <img
-            src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/archive/cg-invest-top.png"
+            src="https://images.cheesegratermagazine.org/archive/cg-invest-top.png"
             alt="Investigations"
           />
         </a>
 
         <div class="body">
           <img
-            src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/archive/cg-detective.png"
+            src="https://images.cheesegratermagazine.org/archive/cg-detective.png"
           />
 
           <div class="content">
@@ -57,14 +63,14 @@ import './Archive.css';
       <section class="section">
         <a href="/humour">
           <img
-            src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/archive/cg-humour-top.png"
+            src="https://images.cheesegratermagazine.org/archive/cg-humour-top.png"
             alt="Humour"
           />
         </a>
 
         <div class="body">
           <img
-            src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/archive/cg-jester.png"
+            src="https://images.cheesegratermagazine.org/archive/cg-jester.png"
           />
 
           <div class="content">
@@ -85,7 +91,8 @@ import './Archive.css';
 
     <img
       class="print-img"
-      src="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/past-issues/CG93-Autumn-2025-updated.png"
+      src={`https://print.cheesegratermagazine.org/${latestIssue.slug}.png`}
+      alt={`Print Edition ${latestIssue.name}`}
     />
   </main>
 

@@ -11,7 +11,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://new.cheesegratermagazine.org",
+  site: "https://cheesegratermagazine.org",
   output: "server",
   integrations: [react(), mdx(), sitemap()],
   adapter: vercel({

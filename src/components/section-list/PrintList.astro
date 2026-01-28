@@ -9,10 +9,10 @@ const data = await getPrintEditions();
   {
     data.map((issue) => (
       <li class='print-item'>
-        <a href={issue.href}>
+        <a href={`/past-issues/${issue.slug}`}>
           <Image
-            src={issue.coverUrl}
-            alt={`Print edition ${issue.name}`}
+            src={`https://print.cheesegratermagazine.org/${issue.slug}.png`}
+            alt={`Print Edition ${issue.name}`}
             width={800}
             height={1120}
             layout='constrained'

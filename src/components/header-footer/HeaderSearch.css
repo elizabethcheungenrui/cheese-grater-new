@@ -82,7 +82,7 @@
 @media (max-width: 1024px) {
   .search-panel {
     top: 0;
-    left: 30%;
+    left: 15%;
     right: auto;
     animation: slide-down 150ms ease-out;
 

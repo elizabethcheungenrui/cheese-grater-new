@@ -11,7 +11,7 @@ import HeaderSearch from './HeaderSearch'
 
     <a href="/" class="logo-link">
       <img 
-        src='https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_web_logo_cropped.png'
+        src='https://images.cheesegratermagazine.org/logos/cg_web_logo_cropped.png'
         width='150px'
       />
       <!--<span class="cheese-grater">
@@ -52,37 +52,39 @@ import HeaderSearch from './HeaderSearch'
     >
       The Digestive
     </a>
-
-    <details>
-      <summary>About Us</summary>
-      <div class="details">
-        <a href="/about">Who We Are</a>
-        <a href="/get-involved">Get Involved</a>
-        <a href="/awards">Awards</a>
-        <a href="/past-editors">Past Editors</a>
-        <a href="/life-members">Honorary Life Members</a>
-      </div>
-    </details>
-
-    <details>
-      <summary>Contact</summary>
-      <div class="details">
-        <a href="/contact">Contact Us</a>
-        <a href="/tips">Anonymous Form</a>
-      </div>
-    </details>
-
-    <details>
-      <summary>Member Resources</summary>
-      <div class="details">
-        <a href="/resources">Training & Style</a>
-        <a href="/welfare">Help & Welfare</a>
-      </div>
-    </details>
-
-    <HeaderSearch
-      client:only="react"
-      isMobile={true}
-    />
   </div>
+
+  <details>
+    <summary>About Us</summary>
+    <div class="details">
+      <a href="/about">Who We Are</a>
+      <a href="/get-involved">Get Involved</a>
+      <a href="/awards">Awards</a>
+      <a href="/past-editors">Past Editors</a>
+      <a href="/life-members">Honorary Life Members</a>
+    </div>
+  </details>
+
+  <details>
+    <summary>Contact</summary>
+    <div class="details">
+      <a href="/contact">Contact Us</a>
+      <a href="/tips">Anonymous Form</a>
+    </div>
+  </details>
+
+  <details>
+    <summary>Member Resources</summary>
+    <div class="details">
+      <a href="/resources">Training & Style</a>
+      <a href="/welfare">Help & Welfare</a>
+    </div>
+  </details>
+
+  <HeaderSearch
+    client:only="react"
+    isMobile={true}
+  />
+    
+  <a class="time-machine" href="/archive">The Time Machine</a>
 </nav>
