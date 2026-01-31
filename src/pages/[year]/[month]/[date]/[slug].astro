@@ -1,0 +1,28 @@
+---
+export const prerender = false;
+
+import { getSupabaseClient } from "../../../../lib/supabaseClient.ts";
+
+const { year, month, date, slug } = Astro.params;
+const canonicalSlug = `${year}-${month}-${date}-${slug}`;
+
+const supabase = getSupabaseClient();
+const { data } = await supabase
+  .from("articles")
+  .select("slug")
+  .eq("slug", canonicalSlug)
+  .maybeSingle();
+
+console.log(canonicalSlug);
+
+// YES → redirect to new site
+if (data) {
+  return Astro.redirect(`/article/${canonicalSlug}`, 301);
+}
+
+// NO → redirect to old site
+return Astro.redirect(
+  `https://old.cheesegratermagazine.org/${year}/${month}/${date}/${slug}`,
+  307
+);
+---
