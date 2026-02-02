@@ -21,28 +21,31 @@ if (error || !article) {
   throw new Error('Article not found');
 }
 
-const canonicalUrl = `https://cheesegratermagazine.org/article/${article.slug}/`;
-
 function stripHtml(html: string) {
   return html.replace(/<[^>]*>/g, "").trim();
 }
+
+const summary = stripHtml(article.summary) ?? "";
+const imageUrl = article.image_url ?? "";
+const canonicalUrl = `https://cheesegratermagazine.org/article/${article.slug}/`;
+
 ---
 
 <BaseLayout
   title=`${article.title} - The Cheese Grater Magazine`
-  description={article.summary}
+  description={summary}
 >
   <Fragment slot="head">
     <meta property="og:type" content="article" />
     <meta property="og:title" content={article.title} />
-    <meta property="og:description" content={stripHtml(article.summary)} />
+    <meta property="og:description" content={summary} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={article.image_url} />
+    <meta property="og:image" content={imageUrl} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={article.title} />
-    <meta name="twitter:description" content={stripHtml(article.summary)} />
-    <meta name="twitter:image" content={article.image_url} />
+    <meta name="twitter:description" content={summary} />
+    <meta name="twitter:image" content={imageUrl} />
 
     <script is:inline type="application/ld+json" set:html=
       {JSON.stringify({
@@ -50,7 +53,7 @@ function stripHtml(html: string) {
         "@type": "NewsArticle",
         "@id": canonicalUrl,
         "headline": article.title,
-        "description": article.summary,
+        "description": summary,
         "datePublished": article.date_published,
         "author": {
           "@type": "Person",
@@ -68,8 +71,8 @@ function stripHtml(html: string) {
           "@type": "WebPage",
           "@id": canonicalUrl,
         },
-        ...(article.image_url && {
-          image: [article.image_url],
+        ...(imageUrl && {
+          image: imageUrl,
         }),
       })}
     />
