@@ -20,11 +20,58 @@ const { data: article, error } = await supabase
 if (error || !article) {
   throw new Error('Article not found');
 }
+
+const canonicalUrl = `https://cheesegratermagazine.org/article/${article.slug}/`;
 ---
 
 <BaseLayout
   title=`${article.title} - The Cheese Grater Magazine`
   description={article.summary}
 >
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={article.title} />
+    <meta property="og:description" content={article.summary} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={article.image_url} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={article.title} />
+    <meta name="twitter:description" content={article.summary} />
+    <meta name="twitter:image" content={article.image_url} />
+
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": canonicalUrl,
+        "headline": article.title,
+        "description": article.summary,
+        "datePublished": article.date_published,
+        "author": {
+          "@type": "Person",
+          "name": article.author,
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Cheese Grater",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://images.cheesegratermagazine.org/logos/cg_cropped.jpeg",
+          },
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": canonicalUrl,
+        },
+        ...(article.image_url && {
+          image: [article.image_url],
+        }),
+      })}
+    </script>
+      
+    <link rel="canonical" href={canonicalUrl} />
+  </Fragment>
+
   <ArticleContent article={article} isEditor={false} />
 </BaseLayout>
