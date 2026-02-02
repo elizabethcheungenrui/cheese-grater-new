@@ -25,7 +25,7 @@ function stripHtml(html: string) {
   return html.replace(/<[^>]*>/g, "").trim();
 }
 
-const summary = stripHtml(article.summary) ?? "";
+const summary = article.summary ? stripHtml(article.summary) : "";
 const imageUrl = article.image_url ?? "";
 const canonicalUrl = `https://cheesegratermagazine.org/article/${article.slug}/`;
 
