@@ -1,0 +1,39 @@
+---
+// src/pages/500.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="500 – Internal Server Error">
+  <main class="not-found">
+    <h1>500 Internal Server Error</h1>
+    <p>
+    If you're seeing this – don't worry, it's not your fault. Please let our editors know at <a href='mailto:editor@cheesegratermagazineorg'>editor@cheesegratermagazineorg</a> and we'll get this article back up as quickly as possible. 
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding: 2rem 10rem;
+  }
+
+  .not-found h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--cg-font);
+  }
+
+  .not-found p {
+    font-family: 'Libre Baskerville';
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--cg-font);
+  }
+
+  @ni
+  @media (max-width: 1024px) {
+    .not-found {
+      padding: 1.5rem;
+    }
+  }
+</style>
