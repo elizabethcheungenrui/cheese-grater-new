@@ -39,3 +39,27 @@ export async function getSectionArticles(
     articles: data as HomepageArticle[],
   };
 }
+
+export async function getSubsectionArticles(
+  section: string,
+  subsection: string,
+  limit?: number,
+): Promise<HomepageSection> {
+  let query = supabase
+    .from("articles")
+    .select("*")
+    .eq("subsection", subsection)
+    .order("date_published", { ascending: false });
+
+  if (typeof limit === "number") {
+    query = query.limit(limit);
+  }
+
+  const { data, error } = await query;
+  if (error) throw error;
+
+  return {
+    section,
+    articles: data as HomepageArticle[],
+  };
+}
