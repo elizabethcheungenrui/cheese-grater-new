@@ -3,6 +3,7 @@ import './ArticleContent.css';
 import { formatDate } from '../../methods/formatting';
 import CCard from '../cards/CCard';
 import MBCard from '../cards/MBCard';
+import { getSupabaseClient } from '../../lib/supabaseClient';
 import { getSubsectionArticles } from '../../lib/getSectionArticles';
 
 const { article, isEditor } = Astro.props;
@@ -13,6 +14,19 @@ const data = await getSubsectionArticles(article.section,article.subsection);
 const filtered = data.articles.filter((a) => a.slug !== article.slug);
 const dataTop = filtered.slice(0, 4);
 const dataBottom = filtered.slice(4, 8);
+
+const supabase = getSupabaseClient();
+
+const { data: authorLinks } = await supabase
+  .from("article_authors")
+  .select(`
+    authors (
+      id,
+      name,
+      slug
+    )
+  `)
+  .eq("article_id", article.id);
 ---
 
 <article class="article-container">
@@ -46,7 +60,21 @@ const dataBottom = filtered.slice(4, 8);
           />
 
           <div class="author-text">
-            <span class="author">{article.author}</span>
+            <span class="author">
+              {authorLinks?.length
+                ? authorLinks.map(({ authors: author }, i) => {
+                  const total = authorLinks.length;
+
+                  return (
+                    <>
+                      <a href={`/author/${author.slug}`}>{author.name}</a>
+                      {total > 1 && i < total - 2 && ', '}
+                      {total > 1 && i === total - 2 && '& '}
+                    </>
+                    )})
+                : article.author
+              }
+            </span>
             <span class="role">{article.role}</span>
           </div>
         </address>
