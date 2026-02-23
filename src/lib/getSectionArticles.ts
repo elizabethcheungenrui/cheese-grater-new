@@ -8,6 +8,8 @@ export interface HomepageArticle {
   author: string;
   author_thumbnail: string;
   image_url: string | null;
+  image_width: number;
+  image_height: number;
   subsection: string;
   date_published: string;
 }
@@ -23,7 +25,7 @@ export async function getSectionArticles(
 ): Promise<HomepageSection> {
   let query = supabase
     .from("articles")
-    .select("*")
+    .select("slug, title, summary, author, author_thumbnail, image_url, image_width, image_height, subsection, date_published")
     .eq("section", section)
     .order("date_published", { ascending: false });
 

@@ -13,7 +13,7 @@ export default function MinorLayout({ data }: { data: HomepageSection }) {
     <div className={`minor-layout minor-layout-${data.section}`}>
       <h3 className="minor-section-title">{data.section}</h3>
 
-      {data.articles.map((article) => (
+      {data.articles.slice(0, 3).map((article) => (
         <CCard
           key={article.slug}
           slug={article.slug}

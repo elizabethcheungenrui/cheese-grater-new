@@ -2,8 +2,11 @@
 export const prerender = true;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionList from '../components/section-list/SectionList.astro';
+
+import { getSectionArticles } from '../lib/getSectionArticles';
+const data = await getSectionArticles("Podcast");
 ---
 
 <BaseLayout title="Podcast – The Cheese Grater Magazine">
-  <SectionList section="Podcast" />
+  <SectionList data={data} />
 </BaseLayout>

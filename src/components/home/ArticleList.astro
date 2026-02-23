@@ -2,16 +2,14 @@
 import './ArticleList.css';
 import BCard from '../../components/cards/BCard';
 import MBCard from '../../components/cards/MBCard';
-import { getSectionArticles } from '../../lib/getSectionArticles';
 import { formatDate, truncateWords } from '../../methods/formatting';
 
-const { section } = Astro.props;
+const { data } = Astro.props;
 
 type SectionKey = keyof typeof sectionInfo;
 
-const data = await getSectionArticles(section, 9);
 const articles = data.articles;
-const sectionKey = section.toLowerCase() as SectionKey;
+const sectionKey = data.section.toLowerCase() as SectionKey;
 
 const sectionInfo = {
   voices: [
@@ -34,7 +32,7 @@ const sectionInfo = {
     <div class="top-grid">
       <div class="titles">
         <h3 class={`${sectionKey}-h3`}>
-          {section}
+          {data.section}
         </h3>
 
         <p>{sectionInfo[sectionKey][0]}</p>

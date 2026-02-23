@@ -3,13 +3,10 @@
 import Title from './Title.astro';
 import List from './List.astro';
 
-const { section } = Astro.props;
-
-// simple server-side mobile detection if you want
-// const isMobile = false; // or via CSS instead
+const { data } = Astro.props;
 ---
 
 <main class="page-desktop">
-  <Title sectionUpper={section} />
-  <List section={section} />
+  <Title sectionUpper={data.section} />
+  <List data={data} />
 </main>

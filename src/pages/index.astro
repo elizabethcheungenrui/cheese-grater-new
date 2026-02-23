@@ -4,12 +4,11 @@ export const prerender = true;
 
 import Home from '../components/home/Home';
 import HomeMobile from '../components/home/HomeMobile';
-import GraphicsCarousel from '../components/home/GraphicsCarousel';
 import { getSectionArticles } from '../lib/getSectionArticles';
 
-const voices = await getSectionArticles('Voices', 3);
-const investigations = await getSectionArticles('News', 3);
-const humour = await getSectionArticles('Humour', 3);
+const voices = await getSectionArticles('Voices', 9);
+const investigations = await getSectionArticles('News', 9);
+const humour = await getSectionArticles('Humour', 9);
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BestPub from '../components/home/BestPub.astro';
@@ -38,9 +37,9 @@ import '../styles/home.css';
     />
   </div>
   <BestPub />
-  <ArticleList section="News" />
+  <ArticleList data={investigations} />
   <Podcast />
-  <ArticleList section="Humour" />
+  <ArticleList data={humour} />
   <Newsletter />
-  <ArticleList section="Voices" />
+  <ArticleList data={voices} />
 </BaseLayout>
