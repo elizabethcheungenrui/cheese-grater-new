@@ -18,20 +18,20 @@
     -8px 0 8px rgba(0, 0, 0, 0.25);
 }
 
-.minor-layout-Voices {
+.minor-layout-mobile.minor-layout-Voices {
   background-image:
     linear-gradient(rgba(196, 40, 115, 0.7), rgba(196, 40, 115, 0.7)),
     url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
 
-.minor-layout-News {
+.minor-layout-mobile.minor-layout-News {
   background-image:
     linear-gradient(rgba(44, 89, 174, 0.7), rgba(44, 89, 174, 0.7)),
     url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
 
-.minor-layout-Humour {
+.minor-layout-mobile.minor-layout-Humour {
   background-image:
-    linear-gradient(rgba(0, 103, 75, 0.7), rgba(0, 103, 75, 0.7)),
+    linear-gradient(rgba(0, 112, 55, 0.7), rgba(0, 112, 55, 0.7)),
     url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
