@@ -20,13 +20,13 @@
 
 .minor-layout-mobile.minor-layout-Voices {
   background-image:
-    linear-gradient(rgba(196, 40, 115, 0.7), rgba(196, 40, 115, 0.7)),
+    linear-gradient(rgba(197, 41, 115, 0.7), rgba(197, 41, 115, 0.7)),
     url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
 
 .minor-layout-mobile.minor-layout-News {
   background-image:
-    linear-gradient(rgba(44, 89, 174, 0.7), rgba(44, 89, 174, 0.7)),
+    linear-gradient(rgba(45, 89, 173, 0.7), rgba(45, 89, 173, 0.7)),
     url("https://images.cheesegratermagazine.org/logos/cg.png");
 }
 
