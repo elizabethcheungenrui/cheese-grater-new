@@ -1,7 +1,6 @@
 ---
 import { getSectionArticles } from '../../lib/getSectionArticles';
 import { getPrintEditions } from '../../lib/getPrintEditions';
-import { Image } from 'astro:assets';
 
 const newsData = await getSectionArticles('News', 5);
 const humourData = await getSectionArticles('Humour', 5);
@@ -89,11 +88,13 @@ import './Archive.css';
       </section>
     </div>
 
-    <img
-      class="print-img"
-      src={`https://print.cheesegratermagazine.org/${latestIssue.slug}.png`}
-      alt={`Print Edition ${latestIssue.name}`}
-    />
+    <a href={`https://print.cheesegratermagazine.org/${latestIssue.slug}.pdf`} target="_blank">
+      <img
+        class="print-img"
+        src={`https://print.cheesegratermagazine.org/${latestIssue.slug}.png`}
+        alt={`Print Edition ${latestIssue.name}`}
+      />
+    </a>
   </main>
 
   <footer class="page-footer">
