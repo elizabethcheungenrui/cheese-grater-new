@@ -110,6 +110,15 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.article-container .main-content ul, ol {
+  list-style-position: inside;
+}
+
+.article-container .main-content li p {
+  display: inline;
+  margin: 0;
+}
+
 .article-container .article-row.mobile-only {
   display: none;
 }
