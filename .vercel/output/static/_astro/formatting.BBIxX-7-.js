@@ -1,1 +1,0 @@
-function o(e){const t=new Date(e),n=t.getDate(),r=t.getFullYear(),c=["January","February","March","April","May","June","July","August","September","October","November","December"][t.getMonth()];return`${n} ${c} ${r}`}function s(e,t){if(!e)return"";if(e.length<=t)return e;const n=e.slice(0,t),r=n.lastIndexOf(" ");return(r>0?n.slice(0,r):n)+"..."}export{o as f,s as t};
