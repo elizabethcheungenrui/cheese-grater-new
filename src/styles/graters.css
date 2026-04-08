@@ -1,0 +1,11 @@
+.graters-page {
+  margin: 0 3rem;
+}
+
+.graters-heading {
+  padding: 0 8rem;
+  font-family: "Libre Baskerville";
+  color: var(--cg-font);
+  text-align: center;
+  font-size: 1.7rem;
+}

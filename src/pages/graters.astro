@@ -1,0 +1,35 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Title from '../components/section-list/Title.astro';
+import '../styles/MoreStyling.css';
+import '../styles/graters.css';
+---
+
+<BaseLayout title="The Graters – The Cheese Grater Magazine">
+  <Title sectionUpper="Graters" />
+  <div class="graters-page">
+    <div class="text">
+      <h1 class="graters-heading">
+        "The UCL Graters are our favourite illegitimate child, after [seeing their most recent show] we might consider leaving them in the will"
+      </h1>
+
+      <div class="author-box">
+        <img
+          class="author-image"
+          src="https://images.cheesegratermagazine.org/author_thumbnails/cg_author.jpeg"
+          alt="The Cheese Grater"
+        />
+
+        <div class="author-text">
+          <span class="author">The Cheese Grater Magazine</span>
+          <span class="role">
+            University College London
+          </span>
+        </div>
+
+      </div>
+    </div> 
+  </div>
+</BaseLayout>

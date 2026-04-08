@@ -1,0 +1,84 @@
+---
+// src/pages/article/[slug].astro
+export const prerender = false;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleContent from '../../components/article/ArticleContent.astro';
+import { getSupabaseClient } from '../../lib/supabaseClient';
+
+const supabase = getSupabaseClient();
+// get slug from URL
+const { slug } = Astro.params;
+
+// fetch article at request/build time
+const { data: article, error } = await supabase
+  .from('articles')
+  .select('*')
+  .eq('slug', slug)
+  .single();
+
+if (error || !article) {
+  throw new Error('Article not found');
+}
+
+function stripHtml(html: string) {
+  return html.replace(/<[^>]*>/g, "").trim();
+}
+
+const summary = article.summary ? stripHtml(article.summary) : "";
+const imageUrl = article.image_url ?? "";
+const canonicalUrl = `https://cheesegratermagazine.org/article/${article.slug}/`;
+
+---
+
+<BaseLayout
+  title=`${article.title} - The Cheese Grater Magazine`
+  description={summary}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={article.title} />
+    <meta property="og:description" content={summary} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={article.title} />
+    <meta name="twitter:description" content={summary} />
+    <meta name="twitter:image" content={imageUrl} />
+
+    <script is:inline type="application/ld+json" set:html=
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "@id": canonicalUrl,
+        "headline": article.title,
+        "description": summary,
+        "datePublished": article.date_published,
+        "author": {
+          "@type": "Person",
+          "name": article.author,
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Cheese Grater",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://images.cheesegratermagazine.org/logos/cg_cropped.jpeg",
+          },
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": canonicalUrl,
+        },
+        ...(imageUrl && {
+          image: imageUrl,
+        }),
+      })}
+    />
+      
+    <link rel="canonical" href={canonicalUrl} />
+  </Fragment>
+
+  <ArticleContent article={article} isEditor={false} />
+</BaseLayout>

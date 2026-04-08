@@ -70,6 +70,14 @@
   animation: cg-drift-section 10s linear infinite;
 }
 
+.title.graters {
+  background-image:
+    linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-graters-t) 100%),
+    url("https://images.cheesegratermagazine.org/logos/cg.png");
+
+  animation: cg-drift-section 10s linear infinite;
+}
+
 .title.print {
   background-image:
     linear-gradient(to right, var(--cg-yellow-t) 0%, #999999aa 100%),
