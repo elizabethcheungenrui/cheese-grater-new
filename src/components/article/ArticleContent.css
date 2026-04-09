@@ -7,6 +7,14 @@
   zoom: 0.9375;
 }
 
+.graters-article {
+  margin: 3rem 0;
+  background-color: white;
+  display: grid;
+  width: 100%;
+  zoom: 0.9375;
+}
+
 .article-container .container-main {
   display: grid;
   gap: 3rem;
@@ -24,19 +32,22 @@
   padding: 2rem;
 }
 
-.article-container .main-heading {
+.article-container .main-heading,
+.graters-article .main-heading {
   display: grid;
   padding: 3rem 3rem 0.5rem 3rem;
   gap: 0.8rem;
 }
 
-.article-container .main-content {
+.article-container .main-content,
+.graters-article .main-content {
   display: grid;
   gap: 1rem;
   padding: 0.5rem 3.5rem 5rem 3.5rem;
 }
 
-.article-container .author-box {
+.article-container .author-box,
+.graters-article .author-box {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
@@ -44,26 +55,30 @@
   align-items: center;
 }
 
-.article-container .author-text {
+.article-container .author-text,
+.graters-article .author-text {
   display: grid;
   align-items: start;
   gap: 0.2rem;
 }
 
-.article-container .author-image {
+.article-container .author-image,
+.graters-article .author-image {
   height: 60px;
   width: 60px;
   border-radius: 30px;
 }
 
-.article-container .author {
+.article-container .author,
+.graters-article .author {
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.1rem;
 }
 
-.article-container .author a {
+.article-container .author a,
+.graters-article .author a {
   color: var(--cg-font);
   text-decoration: none;
 }
@@ -79,14 +94,16 @@
   padding: 1rem;
 }
 
-.article-container .main-heading h1 {
+.article-container .main-heading h1,
+.graters-article .main-heading h1 {
   font-weight: 800;
   font-size: 2.5rem;
   line-height: 3.2rem;
   color: #222;
 }
 
-.article-container .main-content h2 {
+.article-container .main-content h2,
+.graters-article .main-content h2 {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 25px;
@@ -96,7 +113,8 @@
   }
 }
 
-.article-container .main-content,
+.article-container .main-content p,
+.graters-article .main-content p,
 .main-heading p {
   font-family: "Libre Baskerville", serif;
   font-size: 1rem;

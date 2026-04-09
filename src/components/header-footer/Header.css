@@ -155,3 +155,11 @@
     var(--cg-podcast-t)
   );
 }
+
+.graters {
+  --section-gradient: linear-gradient(
+    to right,
+    var(--cg-yellow-t),
+    var(--cg-graters-t)
+  );
+}

@@ -1,11 +1,27 @@
 .graters-page {
-  margin: 0 3rem;
+  margin: 2rem 10rem;
+}
+
+.graters-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+}
+
+.graters-page .graters-main-image {
+  width: 500px;
+  height: auto;
+  box-shadow: 0 0 5px black;
 }
 
 .graters-heading {
-  padding: 0 8rem;
   font-family: "Libre Baskerville";
   color: var(--cg-font);
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  align-self: self-end;
+}
+
+.graters-page .author-box {
+  align-self: self-start;
 }

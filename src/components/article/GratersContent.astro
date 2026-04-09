@@ -1,0 +1,62 @@
+---
+import "./ArticleContent.css";
+import { formatDate } from '../../methods/formatting';
+const { gratersArticle } = Astro.props;
+---
+
+<main class="graters-article">
+  <header class="main-heading">
+    <p class="date">
+      {formatDate(gratersArticle.date_published)}
+    </p>
+
+    <h1>{gratersArticle.title}</h1>
+  </header>
+
+  <section class="main-content">
+    {gratersArticle.summary && (
+      <h2
+        set:html={gratersArticle.summary}
+      />)}
+
+    <address class="author-box">
+      <img
+        class="author-image"
+        src={gratersArticle.author_thumbnail ??
+          'https://images.cheesegratermagazine.org/author_thumbnails/cg_author.jpeg'}
+        alt={gratersArticle.author}
+        loading="lazy"
+      />
+
+      <div class="author-text">
+        <span class="author">
+          {gratersArticle.author}
+        </span>
+        <span class="role">{gratersArticle.role}</span>
+      </div>
+    </address>
+
+    {
+      gratersArticle.video_id && (
+        <iframe
+          src=`https://www.youtube.com/embed/${gratersArticle.video_id}`
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      )
+    }
+
+    {
+      gratersArticle.video_caption && (
+        <p class="caption">{gratersArticle.video_caption}</p>
+      )
+    }
+
+    {
+      gratersArticle.content && (
+        <div class="article-body" set:html={gratersArticle.content} />
+      )
+    }
+  </section>
+</main>

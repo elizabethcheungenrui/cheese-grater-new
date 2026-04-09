@@ -183,3 +183,36 @@
 .date.c-card-date.subpage {
   color: var(--cg-yellow);
 }
+
+/* ============================================
+   G-CARD
+============================================ */
+
+.card.g-card {
+  margin: 2rem 0;
+  padding: 3rem;
+  display: grid;
+  gap: 1rem;
+  background: white;
+}
+
+.card.g-card .gcard-title {
+  font-family: "Bitter";
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #222;
+  text-decoration: none;
+}
+
+.card.g-card .gcard-body {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.card.g-card .gcard-summary {
+  font-family: "Libre Baskerville";
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
