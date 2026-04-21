@@ -53,8 +53,12 @@ This included:
 
 ---
 
-## Running Locally
+## Deployment
 
-```bash
-npm install
-npm run dev
+The site is deployed on Vercel, with Cloudflare managing DNS and CDN behaviour. Content updates can trigger redeploy hooks to refresh the live site.
+
+---
+
+## Status
+
+Actively maintained and continuously developed alongside the publication’s editorial needs.
