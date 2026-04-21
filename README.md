@@ -1,43 +1,64 @@
-# Astro Starter Kit: Minimal
+# The Cheese Grater Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A modern full-stack rebuild of The Cheese Grater Magazine website, replacing a legacy WordPress system with a custom publication platform focused on performance, maintainability, and editorial flexibility.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Live site: https://cheesegratermagazine.org
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## Features
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Server-rendered and statically optimised publication site built with Astro
+- Dynamic article pages backed by Supabase content
+- Reusable component system for article cards, layouts, and section pages
+- Interactive homepage features built with React and Framer Motion
+- Full-text search using PostgreSQL
+- Structured SEO (JSON-LD, metadata, Open Graph)
+- Optimised image delivery and improved page performance
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Tech Stack
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Astro
+- React + TypeScript
+- Supabase (Database)
+- PostgreSQL
+- Vercel (Hosting & Deployment)
+- Cloudflare (DNS/CDN)
+- Cloudflare R2 (Image storage)
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## My Role
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+I designed and built this platform from scratch as a full replacement for the publication’s previous WordPress site.
 
-## 👀 Want to learn more?
+This included:
+- Frontend architecture and component system
+- Content integration and data modelling
+- Search and SEO implementation
+- Performance optimisation
+- Deployment and infrastructure setup
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Architecture Overview
+
+- Content is stored in Supabase and queried by the frontend
+- Astro handles static generation and server-side rendering
+- React is used for interactive components (e.g. homepage animations)
+- Reusable UI components ensure consistency across all sections
+- Images are served via Cloudflare R2 and optimised for delivery
+
+---
+
+## Deployment
+
+The site is deployed on Vercel, with Cloudflare managing DNS and CDN behaviour. Content updates can trigger redeploy hooks to refresh the live site.
+
+---
+
+## Status
+
+Actively maintained and continuously developed alongside the publication’s editorial needs.
